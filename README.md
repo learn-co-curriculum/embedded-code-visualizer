@@ -24,15 +24,14 @@ Scroll down until you see the buttons to generate a permanent link or embed code
 
 You can add the link into a module lesson using Markdown or HTML.   
 
-[Link to debugging session at pythontutor.com](https://pythontutor.com/visualize.html#code=public%20class%20StringUtility%20%7B%0A%20%20public%20static%20boolean%20containsVowel%28String%20str%29%20%7B%0A%20%20%20%20String%20vowels%20%3D%20%22aeiou%22%3B%0A%20%20%20%20for%20%28char%20c%20%3A%20str.toLowerCase%28%29.toCharArray%28%29%29%20%7B%0A%20%20%20%20%20%20%20%20for%20%28char%20v%20%3A%20vowels.toCharArray%28%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28c%20%3D%3D%20v%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20true%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20false%3B%0A%20%20%7D%0A%20%20%0A%20%20public%20static%20void%20main%28String%5B%5D%20args%29%7B%0A%20%20%20%20System.out.println%28StringUtility.containsVowel%28%22HELLO%22%29%29%3B%20%20//true%0A%20%20%7D%0A%7D&cumulative=false&heapPrimitives=true&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false)
-
+[Link to debugging session at pythontutor.com](https://pythontutor.com/visualize.html#code=myList%20%3D%20%281,%20%282,%20%283,%20%284,%20%285,%20None%29%29%29%29%29%0A%0Adef%20sumList%28node,%20subtotal%29%3A%0A%20%20if%20not%20node%3A%0A%20%20%20%20return%20subtotal%0A%20%20else%3A%0A%20%20%20%20return%20sumList%28node%5B1%5D,%20subtotal%20%2B%20node%5B0%5D%29%0A%0Atotal%20%3D%20sumList%28myList,%200%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ## Embedding a visualization session into a lesson
 
 You can also embed a visualization in a module lesson by copying the iframe element.
 This should render correctly in Canvas, but not in a Markdown previewer.
 
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=public%20class%20StringUtility%20%7B%0A%20%20public%20static%20boolean%20containsVowel%28String%20str%29%20%7B%0A%20%20%20%20String%20vowels%20%3D%20%22aeiou%22%3B%0A%20%20%20%20for%20%28char%20c%20%3A%20str.toLowerCase%28%29.toCharArray%28%29%29%20%7B%0A%20%20%20%20%20%20%20%20for%20%28char%20v%20%3A%20vowels.toCharArray%28%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28c%20%3D%3D%20v%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20true%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20return%20false%3B%0A%20%20%7D%0A%20%20%0A%20%20public%20static%20void%20main%28String%5B%5D%20args%29%7B%0A%20%20%20%20System.out.println%28StringUtility.containsVowel%28%22HELLO%22%29%29%3B%20%20//true%0A%20%20%7D%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=true&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=myList%20%3D%20%281,%20%282,%20%283,%20%284,%20%285,%20None%29%29%29%29%29%0A%0Adef%20sumList%28node,%20subtotal%29%3A%0A%20%20if%20not%20node%3A%0A%20%20%20%20return%20subtotal%0A%20%20else%3A%0A%20%20%20%20return%20sumList%28node%5B1%5D,%20subtotal%20%2B%20node%5B0%5D%29%0A%0Atotal%20%3D%20sumList%28myList,%200%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 ## Visualizing The Call Stack
 
@@ -43,10 +42,9 @@ The tool is particularly helpful in visualizing concepts like the call stack, pa
 
 ## Visualizing Memory
 
-The tool helps visualize memory allocation for primitive data types and reference types (objects).
+The tool helps visualize memory allocation for primitive data types and reference types.
 
 [Visualizing Object State](https://pythontutor.com/visualize.html#code=public%20class%20PizzaTopping%20%7B%0A%20%20%20%20private%20String%20name%3B%0A%20%20%20%20private%20int%20likes%3B%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20PizzaTopping%20topping1%20%3D%20new%20PizzaTopping%28%29%3B%0A%20%20%20%20%20%20%20%20PizzaTopping%20topping2%20%3D%20new%20PizzaTopping%28%29%3B%0A%20%20%20%20%20%20%20%20topping1.name%20%3D%20%22Mushroom%22%3B%0A%20%20%20%20%20%20%20%20topping1.likes%20%3D%2010%3B%0A%20%20%20%20%20%20%20%20topping2.name%20%3D%20%22Sausage%22%3B%0A%20%20%20%20%20%20%20%20topping2.likes%20%3D%2015%3B%0A%0A%20%20%20%20%20%20%20%20PizzaTopping%20favoriteTopping%20%3D%20topping2%3B%0A%20%20%20%20%20%20%20%20favoriteTopping.likes%2B%2B%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22My%20favorite%20topping%20is%20%22%20%2B%20favoriteTopping.name%29%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println%28topping1.name%20%2B%20%22%20has%20%22%20%2B%20topping1.likes%20%2B%20%22%20likes%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28topping2.name%20%2B%20%22%20has%20%22%20%2B%20topping2.likes%20%2B%20%22%20likes%22%29%3B%0A%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=16&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false)
-
 
 
 ## Resources
